@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NovaCalc by Oltion Shumolli</title>
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="top-bar">
+      <div class="logo-placeholder">
+        <img src="logo_black.jpg"
+      </div>
+
+      <button class="icon-btn" onclick="toggleTheme()" title="Toggle Theme">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </button>
+    </div>
+
+    <h1>
+      <i class="fa-solid fa-calculator"></i>
+      NovaCalc
+    </h1>
+    <p>Professional Digital Calculator</p>
+    <span class="author">by Oltion Shumolli</span>
+  </header>
+
+  <!-- CALCULATOR -->
+  <div class="calculator">
+    <input type="text" id="display" readonly />
+
+    <div class="buttons">
+      <button onclick="clearAll()">C</button>
+      <button onclick="deleteLast()">⌫</button>
+      <button onclick="append('%')">%</button>
+      <button onclick="append('/')">÷</button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('*')">×</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('-')">−</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('+')">+</button>
+
+      <button class="zero" onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <!-- HISTORY -->
+  <div class="history">
+    <h2>
+      <i class="fa-solid fa-clock-rotate-left"></i>
+      Calculation History
+    </h2>
+    <ul id="historyList"></ul>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <i class="fa-solid fa-code"></i>
+    NovaCalc © 2026 · Designed & Developed by <strong>Oltion Shumolli</strong>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
