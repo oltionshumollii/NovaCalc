@@ -53,10 +53,8 @@ function toggleTheme() {
   document.body.classList.toggle("dark");
 
   const logo = document.querySelector(".logo-placeholder img");
+ const dark = document.body.classList.contains("dark");
+     document.getElementById("logo").src =
+      dark ? "logo_black.jpg" : "logo_white.jpg";
 
-  if (document.body.classList.contains("dark")) {
-    logo.src = "logo_black.jpg";
-  } else {
-    logo.src = "logo _white.jpg";
-  }
 }
