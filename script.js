@@ -55,6 +55,7 @@ function toggleTheme() {
   const logo = document.querySelector(".logo-placeholder img");
  const dark = document.body.classList.contains("dark");
      document.getElementById("logo").src =
-      dark ? "logo_black.jpg" : "logo_white.jpg";
+      dark ? "logo_black.jpg" : "logo _white.jpg";
 
 }
+
